@@ -9,4 +9,10 @@ public class HockeyCoach implements Coach
 		return "Do twenty wrist-shots and twenty slapshots!";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

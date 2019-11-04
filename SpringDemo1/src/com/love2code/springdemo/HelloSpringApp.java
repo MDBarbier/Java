@@ -13,7 +13,8 @@ public class HelloSpringApp {
 		Coach theCoach = context.getBean("myCoach", Coach.class);
 		
 		//Call methods on the bean
-		System.out.println(theCoach.getDailyWorkout());
+		System.out.println(theCoach.getDailyWorkout());		
+		System.out.println(theCoach.getDailyFortune());
 		
 		//Close the context
 		context.close();
@@ -21,3 +22,4 @@ public class HelloSpringApp {
 	}
 
 }
+
