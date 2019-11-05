@@ -14,6 +14,11 @@ public class TrackCoach implements Coach {
 	public String getDailyFortune() {
 		return fortuneService.GetFortune();
 	}
+	
+	@Override
+	public String getRandomDailyFortune() {
+		return fortuneService.GetRandomFortune();
+	}
 
 	public TrackCoach(FortuneService fortuneService) {
 		super();

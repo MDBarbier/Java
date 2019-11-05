@@ -20,4 +20,9 @@ public class BaseballCoach implements Coach
 		fortuneService = theFortuneService;
 	}	
 	
+	@Override
+	public String getRandomDailyFortune() {
+		return fortuneService.GetRandomFortune();
+	}
+	
 }

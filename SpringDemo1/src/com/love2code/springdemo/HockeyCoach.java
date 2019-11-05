@@ -15,4 +15,8 @@ public class HockeyCoach implements Coach
 		return null;
 	}
 
+	@Override
+	public String getRandomDailyFortune() {
+		return null;
+	}
 }
