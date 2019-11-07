@@ -27,5 +27,17 @@ public class TrackCoach implements Coach {
 
 	//zero argument constructor
 	public TrackCoach() {}	
-
+	
+	
+	//add an init method
+	public void doStartupTasks()
+	{
+		System.out.println("TrackCoach: Performing startup tasks...");
+	}
+	
+	//add a destroy method
+	public void doDestroyTasks()
+	{
+		System.out.println("TrackCoach: Performing destroy tasks...");
+	}
 }

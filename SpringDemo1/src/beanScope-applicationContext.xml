@@ -7,31 +7,23 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- load the properties file -->
-	<context:property-placeholder location="classpath:sport.properties"/>
-	
+
     <!-- Define your beans here -->    
     <!-- The default scope for a bean is Singleton. Other options are prototype, request, session, global-session -->
     
-    <bean id="myCoach" class="com.love2code.springdemo.BaseballCoach"  scope="singleton">    
+    <bean id="myCoach" class="com.love2code.springdemo.TrackCoach"  scope="prototype">    
     	  <!-- Constructor DI -->
-    	  <constructor-arg ref="myFortuneService"/>
+    	  <constructor-arg ref="myFortuneService"/>    	  
     </bean>
     
     <bean   id="myFortuneService" class="com.love2code.springdemo.HappyFortuneService">
     
     </bean>
     
+    <!-- Logging -->
     <bean id="myLoggerConfig" class="com.love2code.springdemo.MyLoggerConfig" init-method="initLogger">
     	<property name="rootLoggerLevel" value="FINE" />
     	<property name="printedLoggerLevel" value="FINE"/>    	
-    </bean>
-    
-    <bean id="myCricketCoach" class="com.love2code.springdemo.CricketCoach">
-    	<!--  Setter injection - will call the setter related to the name by looking for method set<methodname>-->
-    	<property name="fortuneService" ref="myFortuneService" />
-    	<property name="emailAddress" value="${foo.email}" />
-    	<property name="team" value="${foo.team}" />
     </bean>
     
 </beans>
