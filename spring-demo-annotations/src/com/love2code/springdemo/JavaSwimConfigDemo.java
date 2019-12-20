@@ -10,10 +10,12 @@ public class JavaSwimConfigDemo {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig2.class);
 				
 		//Beans are singleton in scope by default
-		var bean = context.getBean("swimCoach", Coach.class);
+		var bean = context.getBean("swimCoach", SwimCoach.class);
 		
 		System.out.println(bean.GetDailyWorkout());
-		System.out.println(bean.GetDailyFortune());
+		System.out.println(bean.GetDailyFortune());		
+		System.out.println(bean.getEmail());
+		System.out.println(bean.getTeam());
 				
 		context.close();
 
